@@ -1,0 +1,30 @@
+<div data-ng-init="initAddEditMovie()" class="col-md-6 boxpad">
+<form>
+	<div class="box box-danger">
+		<div class="box-body">
+			<div class="form-group">
+				<label for="name" >Name</label>
+				<div class="col-sm-12 input-group">
+					<input type="text" class="form-control" id="name" data-ng-model="movie.name" placeholder="Name" />
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="movieGenre" >Movie Genre</label>
+				<div class="col-sm-12 input-group">
+					<input type="text" class="form-control" id="movieGenre" data-ng-model="movie.movieGenre" placeholder="Movie Genre" />
+				</div>
+			</div>
+
+			<br>
+			<br>
+			<div class="form-group">
+				<div>
+					<input class="btn btn-success btn-sm" type="submit" data-ng-click="save(this.movie)" value="Save" />
+					<input  class="btn btn-warning btn-sm" type="button"  data-ng-click="backPage()" value="Cancel" />
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+</div>

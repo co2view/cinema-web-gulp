@@ -1,0 +1,30 @@
+<div data-ng-init="moviePageInit()" align="center">
+<h1>Cinema v{{version}}</h1>
+
+	<h2>MOVIES</h2>
+
+	<hr>
+
+	<button class="btn btn-success" data-ng-click="addEdit('')">Add New</button>
+
+	<table>
+		<thead>
+			<tr style="background-color: sandybrown;">
+				<td>Name</td>
+				<td>Movie Genre</td>
+				<td>Actions</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr data-ng-repeat="movie in movies | orderBy : 'name'">
+				<td>{{ movie.name }}</td>
+				<td>{{ movie.movieGenre }}</td>
+				<td>
+					<button class="btn btn-warning" data-ng-click="addEdit(movie.id)">Edit</button>
+					<button class="btn btn-danger" data-ng-click="deleteOne(movie.id)">Delete</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
